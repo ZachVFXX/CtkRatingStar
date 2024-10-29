@@ -4,11 +4,17 @@ author: ZachVFXX
 
 import customtkinter as ctk
 from PIL import Image
+from importlib import resources
+from pathlib import Path
 
-FULL_STAR = ctk.CTkImage(Image.open("assets/full_star.png"), size=(24, 24))
-EMPTY_STAR = ctk.CTkImage(Image.open("assets/empty_star.png"), size=(24, 24))
-FULL_HOVER_STAR = ctk.CTkImage(Image.open("assets/full_star_hover.png"), size=(24, 24))
-HOVER_STAR = ctk.CTkImage(Image.open("assets/hover_star.png"), size=(24, 24))
+
+def get_asset_path(filename):
+    return str(Path(resources.files('CTkStarRating.assets') / filename))
+
+FULL_STAR = ctk.CTkImage(Image.open(get_asset_path("full_star.png")), size=(24, 24))
+EMPTY_STAR = ctk.CTkImage(Image.open(get_asset_path("empty_star.png")), size=(24, 24))
+FULL_HOVER_STAR = ctk.CTkImage(Image.open(get_asset_path("full_star_hover.png")), size=(24, 24))
+HOVER_STAR = ctk.CTkImage(Image.open(get_asset_path("hover_star.png")), size=(24, 24))
 
 
 class CtkStar(ctk.CTkLabel):
