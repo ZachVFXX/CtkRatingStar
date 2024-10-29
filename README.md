@@ -15,14 +15,7 @@ A customizable star rating widget for CustomTkinter applications. This widget pr
 ## Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/ZachVFXX/CtkRatingStar.git
-
-# Navigate to the project directory
-cd ctk-star-rating
-
-# Install required dependencies
-pip install customtkinter Pillow
+pip install CTkRatingStar
 ```
 
 ## Usage
