@@ -1,1 +1,0 @@
-from ctk_star_rating.ctk_star_rating import CtkStarRating
